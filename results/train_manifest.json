@@ -1,0 +1,59 @@
+{
+  "generated_utc": "2026-08-06T23:18:11.324815+00:00",
+  "git_sha": "47c10040d5326200339449e1d9370443dcb453f2-dirty",
+  "environment_file": "results/environment_train.txt",
+  "environment_sha256": "6dff272b228b93e693846ecec2058790a7461d3bf19fd7341844fa7f42152358",
+  "eval_split": "test",
+  "weights_used": "best.pt",
+  "runs": [
+    {
+      "run": "y11n_tiled640_s42",
+      "data_config": "configs/sar_rgb_tiled.yaml",
+      "imgsz": 640,
+      "batch": 32,
+      "epochs_requested": 120,
+      "seed": 42,
+      "model_init": "checkpoints/y11n_tiled640_s42/weights/last.pt",
+      "best_pt_sha256": "f3a82bbb0980f992dd57c955b876800e14ff6c651aed4fa87d92c40017f2e221",
+      "last_pt_sha256": "8569c6d203f87feac5861c3a9e7ff5415a9c8fcfca1283ac7641ee8905b42d5a",
+      "results_csv_rows": 120
+    },
+    {
+      "run": "y8n_tiled640_s42",
+      "data_config": "configs/sar_rgb_tiled.yaml",
+      "imgsz": 640,
+      "batch": 32,
+      "epochs_requested": 120,
+      "seed": 42,
+      "model_init": "checkpoints/y8n_tiled640_s42/weights/last.pt",
+      "best_pt_sha256": "3cdc831358c5ba85dbdc27ee3fd5ed621f3fe834873a5686e7b22265178c1277",
+      "last_pt_sha256": "cc4962f4b1eabcbe722a3b8a3c97cfda0fed355a48129d9ecf65ea88d2a9b0a3",
+      "results_csv_rows": 120
+    },
+    {
+      "run": "y11n_full640_s42",
+      "data_config": "configs/sar_rgb_full.yaml",
+      "imgsz": 640,
+      "batch": 32,
+      "epochs_requested": 120,
+      "seed": 42,
+      "model_init": "yolo11n.pt",
+      "best_pt_sha256": "22c2c6e545c63983eb02730df6d4534194e5938bbd98c1fe33488fe7d9747384",
+      "last_pt_sha256": "75f50812f37134df8f4f781f2cc32de824e870a1ffc81e6c5df08a24ebb54ed7",
+      "results_csv_rows": 120
+    },
+    {
+      "run": "y11n_tiled416_s42",
+      "data_config": "configs/sar_rgb_tiled.yaml",
+      "imgsz": 416,
+      "batch": 48,
+      "epochs_requested": 120,
+      "seed": 42,
+      "model_init": "checkpoints/y11n_tiled416_s42/weights/last.pt",
+      "best_pt_sha256": "1fa2889d03255ea1dc6c1a5646ed43980e95590e9ca285a71a104a936c78c17f",
+      "last_pt_sha256": "39dbfc3157d86926c65f149232ad44135ed0debe5610230da40aad2a8d94ef52",
+      "results_csv_rows": 120
+    }
+  ],
+  "caveat": "VisDrone test-dev is a harder person distribution than train/val (mean person side 14.68 px vs 20.88 px; 31.31% under 8 px vs 9.70%). This intra-VisDrone shift must be reported separately from the train-to-SAR domain gap, per notes/20260805-permanent-phase-status-and-blockers.md Section 7.2."
+}

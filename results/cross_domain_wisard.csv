@@ -1,0 +1,5 @@
+run,domain,class,imgsz,precision,recall,mAP50,mAP50_95
+y11n_tiled640_s42,wisard_vis_tiled,person,640,0.47743,0.29177,0.244,0.09162
+y8n_tiled640_s42,wisard_vis_tiled,person,640,0.47426,0.3026,0.26132,0.10218
+y11n_full640_s42,wisard_vis_tiled,person,640,0.17366,0.06121,0.03215,0.00844
+y11n_tiled416_s42,wisard_vis_tiled,person,416,0.4041,0.25198,0.20121,0.07585

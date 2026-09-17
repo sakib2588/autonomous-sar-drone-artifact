@@ -1,0 +1,18 @@
+[Unit]
+Description=SAR drone Pi power and thermal sampler
+# Deliberately independent of sar-pi-live.service. If the payload dies mid-flight
+# because the rail sagged, this must still be running to record that it sagged.
+After=local-fs.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/home/pi/sar-pi-live/pi-health-log.sh /home/pi/sar_recordings/health.log 5
+Restart=always
+RestartSec=3
+StartLimitIntervalSec=0
+KillSignal=SIGTERM
+TimeoutStopSec=5
+
+[Install]
+WantedBy=multi-user.target

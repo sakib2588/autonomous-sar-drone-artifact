@@ -1,0 +1,33 @@
+{
+  "tiled": {
+    "train": {
+      "images": 6471,
+      "tiles_written": 40523,
+      "positive_tiles": 39983,
+      "negative_tiles": 540
+    },
+    "val": {
+      "images": 548,
+      "tiles_written": 2784,
+      "positive_tiles": 2775,
+      "negative_tiles": 9
+    },
+    "test": {
+      "images": 1610,
+      "tiles_written": 9377,
+      "positive_tiles": 9333,
+      "negative_tiles": 44
+    }
+  },
+  "full": {
+    "train": {
+      "images": 6471
+    },
+    "val": {
+      "images": 548
+    },
+    "test": {
+      "images": 1610
+    }
+  }
+}

@@ -1,0 +1,23 @@
+WiSARD zero-shot, 37,058 tiles, 8,345 annotated people, imgsz 640
+  baseline: y11n_tiled640_s42
+  control : _ctrl_final
+
+metric                                baseline     control      change
+----------------------------------------------------------------------
+AP@0.5                                  0.2570      0.2784     +0.0214
+recall ceiling                          0.6091      0.6035     -0.0056
+total detections                       208,337     130,561     -77,776
+
+false positives at matched recall (the headline)
+target recall                      baseline FP  control FP      change
+----------------------------------------------------------------------
+0.10                                       367         411       12.0%
+0.20                                       957         894       -6.6%
+0.30                                     2,774       1,862      -32.9%
+0.40                                    11,658       6,774      -41.9%
+0.50                                    47,186      31,787      -32.6%
+
+Interpretation is NOT automatic. A reduction here supports the sampling-policy
+explanation at this dose. No reduction means 'no effect detectable at the largest
+negative fraction this corpus can supply' -- 9.55% against WiSARD's 85.8% -- and
+is NOT a refutation of the mechanism.

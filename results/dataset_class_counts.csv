@@ -1,0 +1,4 @@
+split,person,vehicle,two_wheeler,total
+test,27382,39444,8276,75102
+train,106396,188624,48185,343205
+val,13969,17040,7750,38759

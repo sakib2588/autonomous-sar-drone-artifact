@@ -1,0 +1,13 @@
+{
+  "out": "sar-drone-data/processed/sar_rgb_tiled_allneg",
+  "negative_keep_frac": 1.0,
+  "seed": 42,
+  "train_images": 6471,
+  "tiles": 44205,
+  "positive": 39983,
+  "negative": 4222,
+  "negative_fraction": 0.09551,
+  "baseline_negative_fraction": 0.01333,
+  "wisard_negative_fraction": 0.85793,
+  "val_test": "symlinked from sar_rgb_tiled"
+}

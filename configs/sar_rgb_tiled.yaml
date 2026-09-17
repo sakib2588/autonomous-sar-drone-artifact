@@ -1,0 +1,12 @@
+# Moved off an HDD (NTFS-3G over FUSE) onto NVMe on 2026-08-05. On the HDD an
+# epoch took ~1000 s at 40 img/s and the GPU sat idle waiting on IO; the images
+# are byte-identical, only the mount changed.
+# Original copy is untouched at data/processed/sar_rgb_tiled.
+path: sar-drone-data/processed/sar_rgb_tiled
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: person
+  1: vehicle
+  2: two_wheeler

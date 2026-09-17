@@ -1,0 +1,264 @@
+{
+  "artifacts": [
+    {
+      "run": "y11n_tiled640_s42",
+      "artifact_id": "tflite_fp32",
+      "format": "tflite",
+      "path": "checkpoints/y11n_tiled640_s42/weights/best_saved_model/best_float32.tflite",
+      "imgsz": 640,
+      "size_bytes": 10608793,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_tiled640_s42",
+      "artifact_id": "tflite_fp16",
+      "format": "tflite",
+      "path": "checkpoints/y11n_tiled640_s42/weights/best_saved_model/best_float16.tflite",
+      "imgsz": 640,
+      "size_bytes": 5363097,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_tiled640_s42",
+      "artifact_id": "tflite_int8_full",
+      "format": "tflite",
+      "path": "checkpoints/y11n_tiled640_s42/weights/best_saved_model/best_full_integer_quant.tflite",
+      "imgsz": 640,
+      "size_bytes": 2940105,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_tiled640_s42",
+      "artifact_id": "tflite_int8_pertensor",
+      "format": "tflite",
+      "path": "checkpoints/y11n_tiled640_s42/weights/best_saved_model/best_integer_quant.tflite",
+      "imgsz": 640,
+      "size_bytes": 2940385,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_tiled640_s42",
+      "artifact_id": "tflite_int8_hybrid",
+      "format": "tflite",
+      "path": "checkpoints/y11n_tiled640_s42/weights/best_saved_model/tflite_int8/best_int8.tflite",
+      "imgsz": 640,
+      "size_bytes": 2987489,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y8n_tiled640_s42",
+      "artifact_id": "tflite_fp32",
+      "format": "tflite",
+      "path": "checkpoints/y8n_tiled640_s42/weights/best_saved_model/best_float32.tflite",
+      "imgsz": 640,
+      "size_bytes": 12282992,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y8n_tiled640_s42",
+      "artifact_id": "tflite_fp16",
+      "format": "tflite",
+      "path": "checkpoints/y8n_tiled640_s42/weights/best_saved_model/best_float16.tflite",
+      "imgsz": 640,
+      "size_bytes": 6184728,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y8n_tiled640_s42",
+      "artifact_id": "tflite_int8_full",
+      "format": "tflite",
+      "path": "checkpoints/y8n_tiled640_s42/weights/best_saved_model/best_full_integer_quant.tflite",
+      "imgsz": 640,
+      "size_bytes": 3271908,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y8n_tiled640_s42",
+      "artifact_id": "tflite_int8_pertensor",
+      "format": "tflite",
+      "path": "checkpoints/y8n_tiled640_s42/weights/best_saved_model/best_integer_quant.tflite",
+      "imgsz": 640,
+      "size_bytes": 3272172,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y8n_tiled640_s42",
+      "artifact_id": "tflite_int8_hybrid",
+      "format": "tflite",
+      "path": "checkpoints/y8n_tiled640_s42/weights/best_saved_model/tflite_int8/best_int8.tflite",
+      "imgsz": 640,
+      "size_bytes": 3349508,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_full640_s42",
+      "artifact_id": "tflite_fp32",
+      "format": "tflite",
+      "path": "checkpoints/y11n_full640_s42/weights/best_saved_model/best_float32.tflite",
+      "imgsz": 640,
+      "size_bytes": 10609183,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_full640_s42",
+      "artifact_id": "tflite_fp16",
+      "format": "tflite",
+      "path": "checkpoints/y11n_full640_s42/weights/best_saved_model/best_float16.tflite",
+      "imgsz": 640,
+      "size_bytes": 5363487,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_full640_s42",
+      "artifact_id": "tflite_int8_full",
+      "format": "tflite",
+      "path": "checkpoints/y11n_full640_s42/weights/best_saved_model/best_full_integer_quant.tflite",
+      "imgsz": 640,
+      "size_bytes": 2940407,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_full640_s42",
+      "artifact_id": "tflite_int8_pertensor",
+      "format": "tflite",
+      "path": "checkpoints/y11n_full640_s42/weights/best_saved_model/best_integer_quant.tflite",
+      "imgsz": 640,
+      "size_bytes": 2940679,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_full640_s42",
+      "artifact_id": "tflite_int8_hybrid",
+      "format": "tflite",
+      "path": "checkpoints/y11n_full640_s42/weights/best_saved_model/tflite_int8/best_int8.tflite",
+      "imgsz": 640,
+      "size_bytes": 2987879,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_tiled416_s42",
+      "artifact_id": "tflite_fp32",
+      "format": "tflite",
+      "path": "checkpoints/y11n_tiled416_s42/weights/best_saved_model/best_float32.tflite",
+      "imgsz": 416,
+      "size_bytes": 10492765,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_tiled416_s42",
+      "artifact_id": "tflite_fp16",
+      "format": "tflite",
+      "path": "checkpoints/y11n_tiled416_s42/weights/best_saved_model/best_float16.tflite",
+      "imgsz": 416,
+      "size_bytes": 5305281,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_tiled416_s42",
+      "artifact_id": "tflite_int8_full",
+      "format": "tflite",
+      "path": "checkpoints/y11n_tiled416_s42/weights/best_saved_model/best_full_integer_quant.tflite",
+      "imgsz": 416,
+      "size_bytes": 2910969,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_tiled416_s42",
+      "artifact_id": "tflite_int8_pertensor",
+      "format": "tflite",
+      "path": "checkpoints/y11n_tiled416_s42/weights/best_saved_model/best_integer_quant.tflite",
+      "imgsz": 416,
+      "size_bytes": 2911249,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_tiled416_s42",
+      "artifact_id": "tflite_int8_hybrid",
+      "format": "tflite",
+      "path": "checkpoints/y11n_tiled416_s42/weights/best_saved_model/tflite_int8/best_int8.tflite",
+      "imgsz": 416,
+      "size_bytes": 2871457,
+      "interpreter": "(registered from disk)",
+      "export_kwargs": {
+        "int8": true
+      },
+      "status": "ok"
+    }
+  ]
+}

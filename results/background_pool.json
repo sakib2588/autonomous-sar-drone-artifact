@@ -1,0 +1,13 @@
+{
+  "visdrone_split": "train",
+  "positive_tiles": 39984,
+  "negative_tiles_total": 4221,
+  "negatives_kept_in_training": 537,
+  "negatives_held_out": 3684,
+  "realised_training_negative_fraction": 0.01325,
+  "intended_by_docstring": "0.15-0.20",
+  "wisard_negative_tiles": 31793,
+  "wisard_negative_fraction": 0.85793,
+  "held_out_dir": "sar-drone-data/processed/visdrone_heldout_neg",
+  "note": "negative_keep_frac is a fraction OF AVAILABLE NEGATIVES, not a target composition. VisDrone is object-dense, so 17.5 percent of its negatives yields a training set that is under 2 percent negative rather than the 15-20 percent the code intended."
+}

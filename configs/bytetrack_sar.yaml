@@ -1,0 +1,40 @@
+# ByteTrack configuration tuned for SAR person-tracking, not the stock defaults.
+#
+# Every value below is set from the 2026-08-23 webcam measurement
+# (scripts/webcam_diag_out/diag_roomlight.json, diag_lamp.json), where a moving
+# person under room light lost 28 percentage points of frames against their own
+# stationary baseline: 15 points landed between conf 0.15 and 0.35 (detected,
+# then discarded) and 5 points produced no box at all even at conf 0.05.
+#
+# ByteTrack is the right tool for that specific failure. Its whole premise is a
+# second association pass: high-confidence boxes match to tracks first, then the
+# LEFTOVER tracks get matched against the low-confidence boxes that a plain
+# detector throws away. A blurred survivor at conf 0.20 is exactly the case it
+# was designed to recover.
+
+tracker_type: bytetrack
+
+# First-stage association. Matches the display threshold used by
+# scripts/webcam_live_detect.py so a "confirmed" box means the same thing in
+# both places.
+track_high_thresh: 0.18
+
+# Second-stage association -- the ByteTrack mechanism itself. Set below the
+# measured 0.15 floor of the recoverable band so those frames are available for
+# matching to an existing track. Not used to CREATE tracks, only to continue
+# them, which is why it can sit this low without spawning noise.
+track_low_thresh: 0.08
+
+# Creating a track needs stronger evidence than continuing one. Left well above
+# track_low_thresh precisely because the detector is now fed low-confidence
+# boxes: without this gap, sensor noise would spawn phantom survivors.
+new_track_thresh: 0.30
+
+# Frames a lost track stays alive and Kalman-predicted. At the measured 24 FPS
+# this is ~1.25 s of coasting -- long enough to bridge the 5% of frames that
+# yield no box at all, short enough that a track does not haunt the frame after
+# the subject has genuinely gone.
+track_buffer: 30
+
+match_thresh: 0.8
+fuse_score: True

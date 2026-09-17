@@ -1,0 +1,16 @@
+# Negative-fraction CONTROL. Identical to sar_rgb_tiled except that the train split keeps
+# EVERY object-free tile instead of the 17.5-percent-of-negatives sample the baseline used.
+# Realised composition: 4222/44205 = 9.55 percent negative, against the
+# baseline's 1.33 percent. WiSARD deployment is 85.79 percent negative; matching that would
+# need 241,593 negatives and VisDrone contains 4,221, which is a finding in itself.
+#
+# val and test are SYMLINKS to the baseline dataset so both models are scored on the same
+# bytes. Do not regenerate them here.
+path: sar-drone-data/processed/sar_rgb_tiled_allneg
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: person
+  1: vehicle
+  2: two_wheeler

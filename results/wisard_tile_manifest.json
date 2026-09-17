@@ -1,0 +1,289 @@
+{
+  "source": "sar-drone-data/raw/WiSARD/extracted_vis",
+  "dest": "sar-drone-data/processed/sar_wisard_tiled",
+  "frame_stride": 10,
+  "tile_size": 640,
+  "overlap": 0.2,
+  "min_visible_frac": 0.3,
+  "min_box_px": 4.0,
+  "sequences": 38,
+  "frames_kept": 2586,
+  "tiles": 37058,
+  "positive_tiles": 5265,
+  "negative_tiles": 31793,
+  "boxes": 8345,
+  "gt_boxes_dropped_below_min_px": 61,
+  "per_sequence": {
+    "200402_Carnation_Inspire_VIS": {
+      "frames_kept": 55,
+      "frames_total": 544,
+      "tiles": 1760,
+      "positive_tiles": 232,
+      "boxes": 270
+    },
+    "200402_Karen_Inspire_VIS": {
+      "frames_kept": 222,
+      "frames_total": 2226,
+      "tiles": 4430,
+      "positive_tiles": 376,
+      "boxes": 527
+    },
+    "200426_SkookumCreek_Mavic_Mini_VIS_0006": {
+      "frames_kept": 41,
+      "frames_total": 404,
+      "tiles": 328,
+      "positive_tiles": 57,
+      "boxes": 87
+    },
+    "200426_SkookumCreek_Mavic_Mini_VIS_0007": {
+      "frames_kept": 146,
+      "frames_total": 1460,
+      "tiles": 1168,
+      "positive_tiles": 630,
+      "boxes": 822
+    },
+    "200426_SkookumCreek_Mavic_Mini_VIS_0008": {
+      "frames_kept": 93,
+      "frames_total": 939,
+      "tiles": 1674,
+      "positive_tiles": 296,
+      "boxes": 642
+    },
+    "200505_Bellingham_Mavic_Mini_VIS_0015": {
+      "frames_kept": 46,
+      "frames_total": 454,
+      "tiles": 828,
+      "positive_tiles": 97,
+      "boxes": 104
+    },
+    "200505_Bellingham_Mavic_Mini_VIS_0016": {
+      "frames_kept": 31,
+      "frames_total": 303,
+      "tiles": 558,
+      "positive_tiles": 65,
+      "boxes": 65
+    },
+    "200528_Everson_Mavic_Mini_VIS_0021": {
+      "frames_kept": 50,
+      "frames_total": 500,
+      "tiles": 900,
+      "positive_tiles": 115,
+      "boxes": 169
+    },
+    "200528_Everson_Mavic_Mini_VIS_0028": {
+      "frames_kept": 34,
+      "frames_total": 336,
+      "tiles": 612,
+      "positive_tiles": 43,
+      "boxes": 79
+    },
+    "200528_Everson_Mavic_Mini_VIS_0029": {
+      "frames_kept": 24,
+      "frames_total": 237,
+      "tiles": 432,
+      "positive_tiles": 52,
+      "boxes": 75
+    },
+    "200528_Everson_Mavic_Mini_VIS_0031": {
+      "frames_kept": 40,
+      "frames_total": 400,
+      "tiles": 720,
+      "positive_tiles": 111,
+      "boxes": 261
+    },
+    "200614_SuddenValley_Phantom_VIS_0005": {
+      "frames_kept": 39,
+      "frames_total": 379,
+      "tiles": 1248,
+      "positive_tiles": 97,
+      "boxes": 145
+    },
+    "200614_SuddenValley_Phantom_VIS_0006": {
+      "frames_kept": 38,
+      "frames_total": 387,
+      "tiles": 1216,
+      "positive_tiles": 168,
+      "boxes": 247
+    },
+    "200614_SuddenValley_Phantom_VIS_0012": {
+      "frames_kept": 5,
+      "frames_total": 41,
+      "tiles": 160,
+      "positive_tiles": 29,
+      "boxes": 43
+    },
+    "200614_SuddenValley_Phantom_VIS_0013": {
+      "frames_kept": 6,
+      "frames_total": 63,
+      "tiles": 192,
+      "positive_tiles": 16,
+      "boxes": 16
+    },
+    "200614_SuddenValley_Phantom_VIS_0014": {
+      "frames_kept": 25,
+      "frames_total": 235,
+      "tiles": 800,
+      "positive_tiles": 85,
+      "boxes": 129
+    },
+    "200717_Mission_FLIR_VIS": {
+      "frames_kept": 36,
+      "frames_total": 363,
+      "tiles": 1152,
+      "positive_tiles": 61,
+      "boxes": 64
+    },
+    "210327_Airfield_FLIR_VIS_1": {
+      "frames_kept": 50,
+      "frames_total": 497,
+      "tiles": 1600,
+      "positive_tiles": 140,
+      "boxes": 150
+    },
+    "210327_Airfield_FLIR_VIS_2": {
+      "frames_kept": 25,
+      "frames_total": 249,
+      "tiles": 800,
+      "positive_tiles": 55,
+      "boxes": 55
+    },
+    "210327_Airfield_FLIR_VIS_3": {
+      "frames_kept": 31,
+      "frames_total": 302,
+      "tiles": 992,
+      "positive_tiles": 21,
+      "boxes": 21
+    },
+    "210327_Airfield_FLIR_VIS_4": {
+      "frames_kept": 58,
+      "frames_total": 572,
+      "tiles": 1856,
+      "positive_tiles": 12,
+      "boxes": 12
+    },
+    "210417_MtErie_Enterprise_VIS_0003": {
+      "frames_kept": 27,
+      "frames_total": 264,
+      "tiles": 864,
+      "positive_tiles": 83,
+      "boxes": 171
+    },
+    "210417_MtErie_Enterprise_VIS_0005": {
+      "frames_kept": 29,
+      "frames_total": 272,
+      "tiles": 928,
+      "positive_tiles": 75,
+      "boxes": 89
+    },
+    "210417_MtErie_Enterprise_VIS_0007": {
+      "frames_kept": 15,
+      "frames_total": 172,
+      "tiles": 480,
+      "positive_tiles": 33,
+      "boxes": 53
+    },
+    "210529_Carnation_Enterprise_VIS_0023": {
+      "frames_kept": 75,
+      "frames_total": 739,
+      "tiles": 600,
+      "positive_tiles": 218,
+      "boxes": 523
+    },
+    "210529_Carnation_Enterprise_VIS_0025": {
+      "frames_kept": 132,
+      "frames_total": 1315,
+      "tiles": 1056,
+      "positive_tiles": 492,
+      "boxes": 1122
+    },
+    "210812_Hannegan_Enterprise_VIS_0053": {
+      "frames_kept": 72,
+      "frames_total": 715,
+      "tiles": 576,
+      "positive_tiles": 0,
+      "boxes": 0
+    },
+    "210812_Hannegan_Enterprise_VIS_0055": {
+      "frames_kept": 43,
+      "frames_total": 422,
+      "tiles": 344,
+      "positive_tiles": 0,
+      "boxes": 0
+    },
+    "210924_FHL_Enterprise_VIS_0126": {
+      "frames_kept": 101,
+      "frames_total": 1006,
+      "tiles": 808,
+      "positive_tiles": 240,
+      "boxes": 259
+    },
+    "210924_FHL_Enterprise_VIS_0134": {
+      "frames_kept": 28,
+      "frames_total": 273,
+      "tiles": 224,
+      "positive_tiles": 14,
+      "boxes": 24
+    },
+    "210924_FHL_Enterprise_VIS_0401": {
+      "frames_kept": 90,
+      "frames_total": 897,
+      "tiles": 720,
+      "positive_tiles": 318,
+      "boxes": 596
+    },
+    "210924_FHL_Enterprise_VIS_0403": {
+      "frames_kept": 142,
+      "frames_total": 1417,
+      "tiles": 1136,
+      "positive_tiles": 0,
+      "boxes": 0
+    },
+    "210924_FHL_Enterprise_VIS_0405": {
+      "frames_kept": 95,
+      "frames_total": 945,
+      "tiles": 760,
+      "positive_tiles": 82,
+      "boxes": 98
+    },
+    "210924_FHL_Enterprise_VIS_0407": {
+      "frames_kept": 104,
+      "frames_total": 1035,
+      "tiles": 832,
+      "positive_tiles": 203,
+      "boxes": 345
+    },
+    "210924_FHL_Enterprise_VIS_0409": {
+      "frames_kept": 130,
+      "frames_total": 1300,
+      "tiles": 1040,
+      "positive_tiles": 0,
+      "boxes": 0
+    },
+    "210924_FHL_Enterprise_VIS_0564": {
+      "frames_kept": 99,
+      "frames_total": 983,
+      "tiles": 792,
+      "positive_tiles": 0,
+      "boxes": 0
+    },
+    "210924_FHL_Enterprise_VIS_0566": {
+      "frames_kept": 91,
+      "frames_total": 909,
+      "tiles": 728,
+      "positive_tiles": 0,
+      "boxes": 0
+    },
+    "220109_Baker_Enterprise_VIS_1": {
+      "frames_kept": 218,
+      "frames_total": 2180,
+      "tiles": 1744,
+      "positive_tiles": 749,
+      "boxes": 1082
+    }
+  },
+  "caveats": [
+    "Frames are consecutive video and strongly correlated within a sequence; bootstrap over sequences, not over tiles or boxes.",
+    "Every tile is retained including negatives, so the per-frame false-positive rate needed for the R8 SAR operating point is measurable.",
+    "Tiles from one source frame overlap by the configured fraction, so a person near a tile seam can appear in two tiles. Per-tile metrics therefore differ from full-frame metrics; full-frame numbers require merge_tile_detections."
+  ]
+}

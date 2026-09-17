@@ -1,0 +1,19 @@
+{
+  "run": "y11n_tiled640_s42",
+  "imgsz": 640,
+  "confidence_threshold": 0.208,
+  "in_domain": {
+    "source": "VisDrone train negatives held out of training",
+    "tiles": 3684,
+    "false_positives": 220,
+    "fp_per_tile": 0.0597
+  },
+  "target_domain": {
+    "source": "WiSARD negative tiles",
+    "tiles": 31793,
+    "false_positives": 1924,
+    "fp_per_tile": 0.0605
+  },
+  "ratio_target_over_in_domain": 1.013,
+  "verdict": "Rates are within 1.01x. The propensity to fire on empty ground is largely trained in rather than provoked by unfamiliar terrain, which supports the composition explanation and predicts the negative-fraction control will help."
+}

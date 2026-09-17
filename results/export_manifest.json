@@ -1,0 +1,228 @@
+{
+  "artifacts": [
+    {
+      "run": "y11n_tiled640_s42",
+      "artifact_id": "pt_fp32",
+      "format": "pt",
+      "path": "checkpoints/y11n_tiled640_s42/weights/best.pt",
+      "imgsz": 640,
+      "size_bytes": 5481171,
+      "interpreter": "./.venv/bin/python",
+      "export_kwargs": {},
+      "status": "ok"
+    },
+    {
+      "run": "y11n_tiled640_s42",
+      "artifact_id": "onnx_fp32",
+      "format": "onnx",
+      "path": "checkpoints/y11n_tiled640_s42/weights/onnx_fp32/best.onnx",
+      "imgsz": 640,
+      "size_bytes": 10606050,
+      "interpreter": "./.venv/bin/python",
+      "export_kwargs": {
+        "format": "onnx",
+        "imgsz": 640,
+        "opset": 12,
+        "simplify": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_tiled640_s42",
+      "artifact_id": "ncnn_fp32",
+      "format": "ncnn",
+      "path": "checkpoints/y11n_tiled640_s42/weights/ncnn_fp32/best_ncnn_model",
+      "imgsz": 640,
+      "size_bytes": 10523736,
+      "interpreter": "./.venv/bin/python",
+      "export_kwargs": {
+        "format": "ncnn",
+        "imgsz": 640
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_tiled640_s42",
+      "artifact_id": "ncnn_fp16",
+      "format": "ncnn",
+      "path": "checkpoints/y11n_tiled640_s42/weights/ncnn_fp16/best_ncnn_model",
+      "imgsz": 640,
+      "size_bytes": 5374039,
+      "interpreter": "./.venv/bin/python",
+      "export_kwargs": {
+        "format": "ncnn",
+        "imgsz": 640,
+        "half": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y8n_tiled640_s42",
+      "artifact_id": "pt_fp32",
+      "format": "pt",
+      "path": "checkpoints/y8n_tiled640_s42/weights/best.pt",
+      "imgsz": 640,
+      "size_bytes": 6258659,
+      "interpreter": "./.venv/bin/python",
+      "export_kwargs": {},
+      "status": "ok"
+    },
+    {
+      "run": "y8n_tiled640_s42",
+      "artifact_id": "onnx_fp32",
+      "format": "onnx",
+      "path": "checkpoints/y8n_tiled640_s42/weights/onnx_fp32/best.onnx",
+      "imgsz": 640,
+      "size_bytes": 12267270,
+      "interpreter": "./.venv/bin/python",
+      "export_kwargs": {
+        "format": "onnx",
+        "imgsz": 640,
+        "opset": 12,
+        "simplify": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y8n_tiled640_s42",
+      "artifact_id": "ncnn_fp32",
+      "format": "ncnn",
+      "path": "checkpoints/y8n_tiled640_s42/weights/ncnn_fp32/best_ncnn_model",
+      "imgsz": 640,
+      "size_bytes": 12194618,
+      "interpreter": "./.venv/bin/python",
+      "export_kwargs": {
+        "format": "ncnn",
+        "imgsz": 640
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y8n_tiled640_s42",
+      "artifact_id": "ncnn_fp16",
+      "format": "ncnn",
+      "path": "checkpoints/y8n_tiled640_s42/weights/ncnn_fp16/best_ncnn_model",
+      "imgsz": 640,
+      "size_bytes": 6192953,
+      "interpreter": "./.venv/bin/python",
+      "export_kwargs": {
+        "format": "ncnn",
+        "imgsz": 640,
+        "half": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_full640_s42",
+      "artifact_id": "pt_fp32",
+      "format": "pt",
+      "path": "checkpoints/y11n_full640_s42/weights/best.pt",
+      "imgsz": 640,
+      "size_bytes": 5457299,
+      "interpreter": "./.venv/bin/python",
+      "export_kwargs": {},
+      "status": "ok"
+    },
+    {
+      "run": "y11n_full640_s42",
+      "artifact_id": "onnx_fp32",
+      "format": "onnx",
+      "path": "checkpoints/y11n_full640_s42/weights/onnx_fp32/best.onnx",
+      "imgsz": 640,
+      "size_bytes": 10606049,
+      "interpreter": "./.venv/bin/python",
+      "export_kwargs": {
+        "format": "onnx",
+        "imgsz": 640,
+        "opset": 12,
+        "simplify": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_full640_s42",
+      "artifact_id": "ncnn_fp32",
+      "format": "ncnn",
+      "path": "checkpoints/y11n_full640_s42/weights/ncnn_fp32/best_ncnn_model",
+      "imgsz": 640,
+      "size_bytes": 10523729,
+      "interpreter": "./.venv/bin/python",
+      "export_kwargs": {
+        "format": "ncnn",
+        "imgsz": 640
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_full640_s42",
+      "artifact_id": "ncnn_fp16",
+      "format": "ncnn",
+      "path": "checkpoints/y11n_full640_s42/weights/ncnn_fp16/best_ncnn_model",
+      "imgsz": 640,
+      "size_bytes": 5374032,
+      "interpreter": "./.venv/bin/python",
+      "export_kwargs": {
+        "format": "ncnn",
+        "imgsz": 640,
+        "half": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_tiled416_s42",
+      "artifact_id": "pt_fp32",
+      "format": "pt",
+      "path": "checkpoints/y11n_tiled416_s42/weights/best.pt",
+      "imgsz": 416,
+      "size_bytes": 5450323,
+      "interpreter": "./.venv/bin/python",
+      "export_kwargs": {},
+      "status": "ok"
+    },
+    {
+      "run": "y11n_tiled416_s42",
+      "artifact_id": "onnx_fp32",
+      "format": "onnx",
+      "path": "checkpoints/y11n_tiled416_s42/weights/onnx_fp32/best.onnx",
+      "imgsz": 416,
+      "size_bytes": 10508952,
+      "interpreter": "./.venv/bin/python",
+      "export_kwargs": {
+        "format": "onnx",
+        "imgsz": 416,
+        "opset": 12,
+        "simplify": true
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_tiled416_s42",
+      "artifact_id": "ncnn_fp32",
+      "format": "ncnn",
+      "path": "checkpoints/y11n_tiled416_s42/weights/ncnn_fp32/best_ncnn_model",
+      "imgsz": 416,
+      "size_bytes": 10465523,
+      "interpreter": "./.venv/bin/python",
+      "export_kwargs": {
+        "format": "ncnn",
+        "imgsz": 416
+      },
+      "status": "ok"
+    },
+    {
+      "run": "y11n_tiled416_s42",
+      "artifact_id": "ncnn_fp16",
+      "format": "ncnn",
+      "path": "checkpoints/y11n_tiled416_s42/weights/ncnn_fp16/best_ncnn_model",
+      "imgsz": 416,
+      "size_bytes": 5315826,
+      "interpreter": "./.venv/bin/python",
+      "export_kwargs": {
+        "format": "ncnn",
+        "imgsz": 416,
+        "half": true
+      },
+      "status": "ok"
+    }
+  ]
+}

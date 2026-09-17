@@ -1,0 +1,88 @@
+{
+  "model": "/home/pi/sar/artifacts/y11n_tiled640_best_full_integer_quant.tflite",
+  "threads": 4,
+  "frames_total": 220,
+  "warmup_discarded": 60,
+  "input_shape": [
+    1,
+    640,
+    640,
+    3
+  ],
+  "input_dtype": "int8",
+  "end_to_end": {
+    "n": 160,
+    "median_ms": 410.1427,
+    "p95_ms": 756.4156,
+    "p99_ms": 802.8018,
+    "min_ms": 393.8122,
+    "max_ms": 838.1663,
+    "fps_median": 2.4382,
+    "mean_ms": 447.2872
+  },
+  "per_stage": {
+    "decode": {
+      "n": 160,
+      "median_ms": 15.7738,
+      "p95_ms": 19.9856,
+      "p99_ms": 20.0832,
+      "min_ms": 13.7529,
+      "max_ms": 21.2968,
+      "fps_median": 63.3963,
+      "mean_ms": 16.7581
+    },
+    "letterbox": {
+      "n": 160,
+      "median_ms": 32.7334,
+      "p95_ms": 43.1504,
+      "p99_ms": 47.6276,
+      "min_ms": 27.2693,
+      "max_ms": 49.0249,
+      "fps_median": 30.5498,
+      "mean_ms": 33.4627
+    },
+    "forward": {
+      "n": 160,
+      "median_ms": 361.6851,
+      "p95_ms": 698.0545,
+      "p99_ms": 750.3107,
+      "min_ms": 349.7057,
+      "max_ms": 779.9794,
+      "fps_median": 2.7648,
+      "mean_ms": 396.9892
+    },
+    "postprocess": {
+      "n": 160,
+      "median_ms": 0.0152,
+      "p95_ms": 0.0163,
+      "p99_ms": 0.0635,
+      "min_ms": 0.0135,
+      "max_ms": 0.0815,
+      "fps_median": 65694.3897,
+      "mean_ms": 0.0169
+    }
+  },
+  "stage_fractions": {
+    "decode": 0.03845322184504184,
+    "letterbox": 0.07979717581955476,
+    "forward": 0.881712547917822,
+    "postprocess": 3.705441758134603e-05
+  },
+  "state_before": {
+    "throttled_raw": "throttled=0x0",
+    "temp": "temp=45.2'C",
+    "clock_arm": "frequency(48)=1500398464",
+    "volts_core": "volt=0.8563V",
+    "governor": "performance"
+  },
+  "state_after": {
+    "throttled_raw": "throttled=0x0",
+    "temp": "temp=54.5'C",
+    "clock_arm": "frequency(48)=1500398464",
+    "volts_core": "volt=0.8563V",
+    "governor": "performance"
+  },
+  "throttle_after": "clean (throttled=0x0)",
+  "DISCARD_THROTTLED": false,
+  "note": "NMS is not in this run: the exported graph emits raw predictions and the NMS stage is measured separately once the decoder is ported. End-to-end here is decode + letterbox + forward + dequantise, so it is a LOWER BOUND on deployed latency."
+}

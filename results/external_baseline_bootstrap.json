@@ -1,0 +1,33 @@
+{
+  "domain": "wisard_vis_tiled",
+  "class": "person",
+  "iou_threshold": 0.5,
+  "n_bootstrap": 10000,
+  "resampling_unit": "sequence",
+  "seed": 42,
+  "conf_floor": 0.005,
+  "max_det": 100,
+  "smoke": false,
+  "note": "Independent, aerial-domain-pretrained detectors, never trained by this project, scored on the same 37,058 WiSARD tiles under the same protocol as results/cross_domain_bootstrap.json. Written to a SEPARATE file on purpose -- merge into Table I by hand, do not overwrite the project-model results file with this one.",
+  "runs": {
+    "ext_y8s_visdrone_hf": {
+      "sequences": 38,
+      "tiles": 37058,
+      "gt_boxes": 8345,
+      "detections": 809288,
+      "AP50": 0.04096,
+      "AP50_ci_low": 0.01071,
+      "AP50_ci_high": 0.09647,
+      "recall_at_fp_budget": 0.08017,
+      "recall_ci_low": 0.02509,
+      "recall_ci_high": 0.1444,
+      "operating_threshold": 0.53224,
+      "achieved_fp_per_tile": 0.09998,
+      "fp_budget_per_tile": 0.1,
+      "source": "mshamrai/yolov8s-visdrone (Hugging Face, openrail license)",
+      "trained_on": "VisDrone2019-DET, third-party, never touched WiSARD or this project",
+      "imgsz": 640,
+      "smoke": false
+    }
+  }
+}

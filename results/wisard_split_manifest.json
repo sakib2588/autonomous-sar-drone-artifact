@@ -1,0 +1,81 @@
+{
+  "source_tiles": "sar-drone-data/processed/sar_wisard_tiled",
+  "split_lists": "sar-drone-data/processed/sar_wisard_ft",
+  "ratios": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "seed": 42,
+  "balanced_on": "person box count (weight_fn), not tile count",
+  "key_fn": "sar_eval.wisard_tile_sequence_key",
+  "totals": {
+    "tiles": 37058,
+    "boxes": 8345
+  },
+  "splits": {
+    "train": {
+      "sequences": 31,
+      "sequence_ids": [
+        "200402_Carnation_Inspire_VIS",
+        "200426_SkookumCreek_Mavic_Mini_VIS_0006",
+        "200426_SkookumCreek_Mavic_Mini_VIS_0008",
+        "200505_Bellingham_Mavic_Mini_VIS_0015",
+        "200528_Everson_Mavic_Mini_VIS_0029",
+        "200614_SuddenValley_Phantom_VIS_0005",
+        "200614_SuddenValley_Phantom_VIS_0006",
+        "200614_SuddenValley_Phantom_VIS_0012",
+        "200614_SuddenValley_Phantom_VIS_0013",
+        "200614_SuddenValley_Phantom_VIS_0014",
+        "210327_Airfield_FLIR_VIS_1",
+        "210327_Airfield_FLIR_VIS_2",
+        "210327_Airfield_FLIR_VIS_4",
+        "210417_MtErie_Enterprise_VIS_0003",
+        "210417_MtErie_Enterprise_VIS_0005",
+        "210417_MtErie_Enterprise_VIS_0007",
+        "210529_Carnation_Enterprise_VIS_0023",
+        "210529_Carnation_Enterprise_VIS_0025",
+        "210924_FHL_Enterprise_VIS_0134.mp4",
+        "210924_FHL_Enterprise_VIS_0401.mp4",
+        "DJI_0021 (1-6-2022 8-21-53 AM).mp4",
+        "DJI_0031 (1-6-2022 8-22-14 AM).mp4",
+        "DJI_0053",
+        "DJI_0055",
+        "DJI_0126",
+        "DJI_0403.mp4",
+        "DJI_0405.mp4",
+        "DJI_0407.mp4",
+        "DJI_0409.mp4",
+        "DJI_0564.mp4",
+        "DJI_0566"
+      ],
+      "tiles": 26402,
+      "positive_tiles": 3320,
+      "boxes": 5685
+    },
+    "val": {
+      "sequences": 2,
+      "sequence_ids": [
+        "200528_Everson_Mavic_Mini_VIS_0028",
+        "DJI_0582 (1-10-2022 2-51-42 PM).mp4"
+      ],
+      "tiles": 2356,
+      "positive_tiles": 792,
+      "boxes": 1161
+    },
+    "test": {
+      "sequences": 5,
+      "sequence_ids": [
+        "200402_Karen_Inspire_VIS",
+        "200426_SkookumCreek_Mavic_Mini_VIS_0007",
+        "200505_Bellingham_Mavic_Mini_VIS_0016",
+        "200717_Mission_FLIR_VIS",
+        "210327_Airfield_FLIR_VIS_3"
+      ],
+      "tiles": 8300,
+      "positive_tiles": 1153,
+      "boxes": 1499
+    }
+  },
+  "note": "Whole sequences are allocated, never individual tiles: WiSARD tiles come from consecutive video frames sampled at stride 10, so a tile-level split would put near-duplicate frames on both sides of the boundary. Six of the 38 sequences contain no annotated person and contribute only negatives, which is why the allocator balances box count rather than tile count."
+}

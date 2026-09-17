@@ -1,0 +1,51 @@
+{
+  "domain": "wisard_vis_tiled",
+  "class": "person",
+  "run": "y11n_tiled640_s42",
+  "iou_threshold": 0.5,
+  "n_bootstrap": 2000,
+  "resampling_unit": "sequence",
+  "seed": 42,
+  "conf_floor": 0.005,
+  "max_det": 100,
+  "tile_stride": 20,
+  "hypothesis": "The zero-shot cross-domain drop is driven by a scale-distribution shift. VisDrone train persons are mean 20.88 px with 74.8 percent inside 8-32 px; WiSARD persons are mean 67.30 px with 79.5 percent at or above 32 px, all measured in the same 640 px tile space. Reducing the inference input size shrinks apparent object size back toward the trained band without retraining.",
+  "caveat": "Reducing imgsz shrinks the objects while holding the ground footprint fixed; true ground-sample-distance matching would also widen the footprint. The two are not the same operation. Re-tiling from source is impossible here because the raw WiSARD frames were deleted and only the 640 px tiles survive.",
+  "verdict": "best imgsz 640 AP50 0.3755 vs baseline 0.3755 (gain +0.0000); NOT SUPPORTED: best point falls inside the baseline CI",
+  "sweep": [
+    {
+      "imgsz": 640,
+      "downscale": 1.0,
+      "sequences": 38,
+      "tiles": 1853,
+      "gt_boxes": 539,
+      "detections": 11478,
+      "AP50": 0.37549,
+      "AP50_ci_low": 0.15564,
+      "AP50_ci_high": 0.56424,
+      "recall_at_fp_budget": 0.40445,
+      "recall_ci_low": 0.22714,
+      "recall_ci_high": 0.55365,
+      "operating_threshold": 0.19386,
+      "achieved_fp_per_tile": 0.09984,
+      "fp_budget_per_tile": 0.1
+    },
+    {
+      "imgsz": 256,
+      "downscale": 2.5,
+      "sequences": 38,
+      "tiles": 1853,
+      "gt_boxes": 539,
+      "detections": 5821,
+      "AP50": 0.36885,
+      "AP50_ci_low": 0.17932,
+      "AP50_ci_high": 0.54031,
+      "recall_at_fp_budget": 0.38033,
+      "recall_ci_low": 0.22885,
+      "recall_ci_high": 0.52718,
+      "operating_threshold": 0.15472,
+      "achieved_fp_per_tile": 0.09984,
+      "fp_budget_per_tile": 0.1
+    }
+  ]
+}

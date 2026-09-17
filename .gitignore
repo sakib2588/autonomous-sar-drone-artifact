@@ -1,0 +1,32 @@
+# --- regenerated locally, not part of this artifact repo ---
+data/
+checkpoints/
+runs/
+logs/
+
+# --- python ---
+__pycache__/
+*.py[cod]
+.venv/
+.venv-tflite/
+venv/
+env/
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# --- large / binary artifacts, regenerate via scripts/ ---
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.ncnn.*
+
+# --- secrets ---
+.env
+*.key
+*.pem
+
+# --- os ---
+.DS_Store
+Thumbs.db

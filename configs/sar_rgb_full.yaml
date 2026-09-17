@@ -1,0 +1,13 @@
+# Moved off the HDD onto the NVMe on 2026-08-05, same reason as sar_rgb_tiled.
+# The original data/processed/sar_rgb_full holds SYMLINKS into data/raw/VisDrone,
+# so a plain copy would still have read from the HDD; this copy was made with
+# rsync -aL to resolve them into real files (17,258 files, 1.82 GiB, 0 symlinks).
+# Original is untouched at data/processed/sar_rgb_full.
+path: sar-drone-data/processed/sar_rgb_full_deref
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: person
+  1: vehicle
+  2: two_wheeler

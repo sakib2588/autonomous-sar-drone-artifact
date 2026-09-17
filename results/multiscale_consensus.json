@@ -1,0 +1,56 @@
+{
+  "run": "y11n_tiled640_s42",
+  "scales": [
+    640,
+    320
+  ],
+  "corroboration_iou": 0.4,
+  "verdict": "best variant '320 alone' AP50 0.3296 against 0.3296 for the single-scale 320 baseline; consensus does NOT beat the single-scale baseline",
+  "variants": [
+    {
+      "AP50": 0.25697,
+      "ropti_max": 0.0864,
+      "recall_at_0.1fp": 0.3207,
+      "detections": 208337,
+      "true_positives": 5083,
+      "false_positives": 203254,
+      "variant": "640 alone"
+    },
+    {
+      "AP50": 0.32956,
+      "ropti_max": 0.1383,
+      "recall_at_0.1fp": 0.3866,
+      "detections": 114469,
+      "true_positives": 5204,
+      "false_positives": 109265,
+      "variant": "320 alone"
+    },
+    {
+      "AP50": 0.26684,
+      "ropti_max": 0.0882,
+      "recall_at_0.1fp": 0.3368,
+      "detections": 78519,
+      "true_positives": 4635,
+      "false_positives": 73884,
+      "variant": "confirm-640 by 320"
+    },
+    {
+      "AP50": 0.32343,
+      "ropti_max": 0.1354,
+      "recall_at_0.1fp": 0.3859,
+      "detections": 62911,
+      "true_positives": 4820,
+      "false_positives": 58091,
+      "variant": "confirm-320 by 640"
+    },
+    {
+      "AP50": 0.32693,
+      "ropti_max": 0.1366,
+      "recall_at_0.1fp": 0.3907,
+      "detections": 163175,
+      "true_positives": 5386,
+      "false_positives": 157789,
+      "variant": "union + NMS"
+    }
+  ]
+}

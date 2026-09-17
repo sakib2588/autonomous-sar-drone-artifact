@@ -1,0 +1,67 @@
+[Unit]
+Description=SAR drone live capture + detection pipeline
+# Camera device must exist before this starts, and the network isn't needed
+# for anything this process does (recording is local-only, per the
+# no-ground-streaming decision in the hardware procurement notes).
+After=local-fs.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/sar-pi-live
+# Model/capture/tile settings match the operating point chosen in
+# notes/20260823-decision-moving-target-capture-fixes.md: the 416 tiled
+# checkpoint has LOWER per-frame AP50 than the 640 model but buys 3.4x more
+# inference attempts per unit time at the same drone speed, which dominates
+# encounter-level detection probability. Do not swap back to the 640 model
+# for raw per-frame accuracy without re-reading that note's Finding 5 math.
+#
+# FP32, not full-integer INT8, per notes/20260825-decision-pi-fp32-switch-and
+# -wifi-powersave.md. Full integer quantisation costs 12.8 pp mAP50 and 39% of
+# small-object AP, and small objects are the whole mission. It buys nothing:
+# inference goes 645 -> 772 ms but the end-to-end look rate is indistinguishable
+# because capture, tiling and H.264 encode set the pace, and float gets the
+# XNNPACK delegate that int8 does not.
+#
+# conf-thres 0.10, not the 0.25 script default, from the on-device sweep in the
+# same note and the corpus sweep in results/threshold_sweep.txt: 0.10 recovers
+# 0.3865 of annotated people against 0.3009 at 0.25, for +0.182 FP/tile. For
+# search and rescue that asymmetry is the whole point. Note the consequence:
+# 0.259 FP/tile over four tiles at ~1 inference/s is about one false positive
+# per second over empty ground. That is expected, not a fault -- conf is logged
+# per detection, so the threshold can be raised offline.
+#
+# writer-fps is pinned and calibration disabled because the startup calibration
+# measured the loop rate for 3 s BEFORE the inference load was applied, reading
+# ~10.16 FPS against a true ~4.9 and stamping that into the first segment's mp4
+# header. 4.9 is the measured steady rate across 15 timing sidecars. Disabling
+# calibration also removes a 3 s camera-open race at startup.
+#
+# segment-seconds 60, not 300, so an ungraceful power loss costs at most a
+# minute of footage instead of five. A killed VideoWriter leaves no moov atom.
+ExecStart=/home/pi/sar-pi-live/.venv-tflite/bin/python /home/pi/sar-pi-live/15_pi_live.py \
+    --model /home/pi/sar-pi-live/models/tiled416_float32.tflite \
+    --camera /dev/video0 \
+    --width 640 --height 480 \
+    --tile --tile-overlap 0.2 \
+    --conf-thres 0.10 \
+    --writer-fps 4.9 \
+    --calibrate-seconds 0 \
+    --segment-seconds 60 \
+    --out-dir /home/pi/sar_recordings
+# always, not on-failure: this is a field payload, and a clean exit(0) for any
+# reason should still come back. An explicit systemctl stop is not a restart
+# trigger, so graceful shutdown still works.
+Restart=always
+RestartSec=3
+# Disable the start rate limiter. The default gives up after 5 restarts in 10 s,
+# which is exactly the wrong behaviour when the camera is browning out mid-flight.
+StartLimitIntervalSec=0
+# SIGTERM, not SIGKILL, so 15_pi_live.py's finally block runs: releases the
+# VideoWriter (flushes the mp4 index) and closes the log file. A killed
+# writer leaves an mp4 with no moov atom -- unplayable, not just truncated.
+KillSignal=SIGTERM
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target

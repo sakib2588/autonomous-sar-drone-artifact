@@ -1,0 +1,13 @@
+run                          y11n_tiled640_s42 @ imgsz 640
+tiles                        37058 total, 5265 with a person, 31793 empty (85.8%)
+detections                   208337 total, 160672 on empty tiles (77.1%)
+ground-truth persons         8345
+
+AP@0.5, every tile (ours)    0.2570
+AP@0.5, positives only       0.3287
+protocol delta               +0.0717  (+27.9% relative to ours)
+
+WiSARD visual baseline       0.892
+gap under our protocol       0.6350
+gap under theirs             0.5633
+share of the gap that is protocol, not detection   11.3%

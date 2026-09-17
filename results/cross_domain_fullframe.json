@@ -1,0 +1,72 @@
+{
+  "domain": "wisard_vis_fullframe_merged",
+  "class": "person",
+  "iou_threshold": 0.5,
+  "nms_iou": 0.5,
+  "n_bootstrap": 10000,
+  "resampling_unit": "sequence",
+  "seed": 42,
+  "note": "Frame-level: tiles are detected independently then merged with merge_tile_detections (per-class NMS across seams) into full-frame coordinates, matching how the deployed system runs. The false-positive budget is per FRAME here, which is what the plan specifies; the per-tile results in cross_domain_bootstrap.json use a budget roughly 14x looser and are therefore optimistic as an operating point. Ground truth is the original full-frame annotation, so tile-overlap double counting is removed from both sides.",
+  "runs": {
+    "y11n_tiled640_s42": {
+      "sequences": 38,
+      "frames": 2586,
+      "gt_boxes": 4458,
+      "merged_detections": 93358,
+      "AP50": 0.24257,
+      "AP50_ci_low": 0.13641,
+      "AP50_ci_high": 0.37338,
+      "recall_at_fp_budget": 0.11306,
+      "recall_ci_low": 0.05305,
+      "recall_ci_high": 0.22252,
+      "operating_threshold": 0.69981,
+      "achieved_fp_per_frame": 0.09977,
+      "fp_budget_per_frame": 0.1
+    },
+    "y8n_tiled640_s42": {
+      "sequences": 38,
+      "frames": 2586,
+      "gt_boxes": 4458,
+      "merged_detections": 138312,
+      "AP50": 0.25118,
+      "AP50_ci_low": 0.14255,
+      "AP50_ci_high": 0.37361,
+      "recall_at_fp_budget": 0.10633,
+      "recall_ci_low": 0.05409,
+      "recall_ci_high": 0.2144,
+      "operating_threshold": 0.74385,
+      "achieved_fp_per_frame": 0.09977,
+      "fp_budget_per_frame": 0.1
+    },
+    "y11n_full640_s42": {
+      "sequences": 38,
+      "frames": 2586,
+      "gt_boxes": 4458,
+      "merged_detections": 731078,
+      "AP50": 0.04488,
+      "AP50_ci_low": 0.01163,
+      "AP50_ci_high": 0.12483,
+      "recall_at_fp_budget": 0.04329,
+      "recall_ci_low": 0.0178,
+      "recall_ci_high": 0.09126,
+      "operating_threshold": 0.67114,
+      "achieved_fp_per_frame": 0.09977,
+      "fp_budget_per_frame": 0.1
+    },
+    "y11n_tiled416_s42": {
+      "sequences": 38,
+      "frames": 2586,
+      "gt_boxes": 4458,
+      "merged_detections": 139179,
+      "AP50": 0.21363,
+      "AP50_ci_low": 0.09917,
+      "AP50_ci_high": 0.3515,
+      "recall_at_fp_budget": 0.10408,
+      "recall_ci_low": 0.04022,
+      "recall_ci_high": 0.20683,
+      "operating_threshold": 0.67807,
+      "achieved_fp_per_frame": 0.09977,
+      "fp_budget_per_frame": 0.1
+    }
+  }
+}

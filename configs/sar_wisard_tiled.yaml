@@ -1,0 +1,24 @@
+# Tiled WiSARD cross-domain EVAL set. Never trained on.
+#
+# Declared with the FULL 3-class RGB label space, not as a single-class set,
+# even though WiSARD is person-only. The models carry nc=3, so a 1-class config
+# both fails ultralytics' nc check and shifts class indices. Here index 0 is
+# person in both spaces and classes 1 and 2 simply have zero ground-truth
+# instances.
+#
+# Consequence to respect when reporting: any vehicle or two_wheeler the model
+# correctly detects in WiSARD imagery is unlabelled here, so it scores as a
+# false positive and drags the aggregate "all" mAP down. Only the PERSON row is
+# meaningful for the cross-domain claim, and the paper must label it a
+# single-class number.
+#
+# train/val point at the same test dir only because ultralytics requires the
+# keys; this set has no training split by construction.
+path: sar-drone-data/processed/sar_wisard_tiled
+train: images/test
+val: images/test
+test: images/test
+names:
+  0: person
+  1: vehicle
+  2: two_wheeler

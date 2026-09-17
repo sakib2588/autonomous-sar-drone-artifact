@@ -1,0 +1,8 @@
+path: sar-drone-data/processed/sar_wisard_ft
+train: train_n31_s123.txt
+val: val.txt
+test: test.txt
+names:
+  0: person
+  1: vehicle
+  2: two_wheeler

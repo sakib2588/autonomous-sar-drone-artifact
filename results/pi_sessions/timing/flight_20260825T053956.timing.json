@@ -1,0 +1,8 @@
+{
+  "segment": "flight_20260825T053956.mp4",
+  "header_fps": 9.587,
+  "frames_written": 1421,
+  "wall_seconds": 300.189,
+  "true_fps": 4.734,
+  "note": "header_fps is what the mp4 claims; true_fps is measured. Re-time with true_fps before reading motion off this video."
+}

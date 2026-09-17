@@ -1,0 +1,3 @@
+imgsz,downscale,sequences,tiles,gt_boxes,detections,AP50,AP50_ci_low,AP50_ci_high,recall_at_fp_budget,recall_ci_low,recall_ci_high,operating_threshold,achieved_fp_per_tile,fp_budget_per_tile
+640,1.0,38,1853,539,11478,0.37549,0.15564,0.56424,0.40445,0.22714,0.55365,0.19386,0.09984,0.1
+256,2.5,38,1853,539,5821,0.36885,0.17932,0.54031,0.38033,0.22885,0.52718,0.15472,0.09984,0.1

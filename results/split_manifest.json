@@ -1,0 +1,47 @@
+{
+  "dataset": "VisDrone2019-DET",
+  "source": "official Ultralytics-converted train/val/test-dev split",
+  "splits": {
+    "train": {
+      "frame_count": 6471,
+      "video_sequence_count": 208,
+      "sequence_keys_sample": [
+        "train/0000002",
+        "train/0000003",
+        "train/0000007",
+        "train/0000008",
+        "train/0000010"
+      ]
+    },
+    "val": {
+      "frame_count": 548,
+      "video_sequence_count": 76,
+      "sequence_keys_sample": [
+        "val/0000001",
+        "val/0000021",
+        "val/0000022",
+        "val/0000023",
+        "val/0000024"
+      ]
+    },
+    "test": {
+      "frame_count": 1610,
+      "video_sequence_count": 61,
+      "sequence_keys_sample": [
+        "test/0000006",
+        "test/0000011",
+        "test/0000054",
+        "test/0000063",
+        "test/0000066"
+      ]
+    }
+  },
+  "leak_check": {
+    "method": "full md5 content hash over all 8629 images across train/val/test",
+    "cross_split_duplicate_content": 0,
+    "intra_split_duplicate_content": 3,
+    "note": "filename video-id numbering restarts independently per split (24 ids coincidentally shared between train/val, e.g. 0000072) -- verified zero shared image bytes; sequence key is namespaced by split to avoid false-merge in any future re-pooling",
+    "verified": "2026-08-04"
+  },
+  "gate": "GATE-2 PASS -- zero cross-split content leakage confirmed by full md5 scan, not just filename grouping"
+}
